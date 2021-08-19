@@ -60,3 +60,7 @@ img {
   flex-basis: calc(100% / 3);
   padding: 10px 2% 100px;
 }
+
+.col-full {
+  flex-basis: 100%;
+}
