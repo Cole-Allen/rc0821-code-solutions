@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  background: rgb(240, 240, 240);
+}
+
 img {
   width: 100%;
 }
