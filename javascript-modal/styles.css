@@ -1,0 +1,64 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.main-button {
+  background: rgb(76, 50, 224);
+  color: white;
+  font-size: 40px;
+  border: none;
+  padding: 10px 50px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.726);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.survey {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.survey > h1 {
+  flex-basis: 100%;
+  font-weight: 800;
+}
+
+.survey > button {
+  margin-top: 50px;
+  border: none;
+  color: white;
+  font-size: 40px;
+  background: rgb(255, 96, 79);
+  border-radius: 10px;
+  padding: 10px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.137);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
