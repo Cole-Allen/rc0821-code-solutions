@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+}
+
+span {
+  font-size: 40px;
+}
+
+.container {
+  height: 100vh;
+}
+
+.container,
+.type,
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentLetter {
+  border-bottom: 3px solid black;
+}
+
+.green {
+  color: rgb(85, 255, 0);
+}
+
+.red {
+  color: red;
+  border-color: red;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.376);
+}
+
+.modal {
+  padding: 50px;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.modal > h1 {
+  font-family: sans-serif;
+}
+
+.modal > button {
+  border: none;
+  padding: 10px 30px;
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: white;
+  background: salmon;
+  border-radius: 20px;
+}
+
+.modal > button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
