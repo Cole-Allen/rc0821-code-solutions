@@ -1,5 +1,12 @@
 /* exported isAnagram */
 function isAnagram(firstString, secondString) {
+  if (firstString.length > secondString.length || firstString.length < secondString.length) {
+    var firstNoSpace = firstString.replaceAll(' ', '');
+    var secondNoSpace = secondString.replaceAll(' ', '');
+    if (firstNoSpace.length > secondNoSpace.length || firstNoSpace.length < secondNoSpace.length) {
+      return false;
+    }
+  }
   var indexes = [];
   for (var i = 0; i < firstString.length; i++) {
     var match = false;
@@ -16,5 +23,3 @@ function isAnagram(firstString, secondString) {
   }
   return true;
 }
-
-/* dang im close */
