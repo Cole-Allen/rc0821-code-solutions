@@ -1,0 +1,200 @@
+    1  cd repos
+    2  cd ajax-project/
+    3  git add .
+    4  git commit -m 'Seperated random cat images from saved data' --no-verify
+    5  git add .
+    6  git commit -m 'Grid is not colums to more resemble websites like imgur' --no-verify
+    7  git add .
+    8  git commit -m 'Fixed favorites tab and home view switching bugs' --no-verify
+    9  git add .
+   10  git commit -m 'Favorites tab shows when you are in the favorites view' --no-verify
+   11  git push origin issue-3-favorite-photos 
+   12  git switch master
+   13  git pull origin
+   14  git branch issue-4-make-meme
+   15  git switch issue-4-make-meme 
+   16  git add .
+   17  git commit -m 'Cleaned up the refresh views function a little'
+   18  git add .
+   19  git commit -m 'Small design tweaks'
+   20  git add .
+   21  git commit -m 'Fixed images not covering card properly'
+   22  git add .
+   23  git commit -m 'Repeatimages now properly check to see if youve already favorited them' --no-verify
+   24  git add .
+   25  git commit -m 'Favorites broke, trying to fix' --no-verify
+   26  git add .
+   27  git commit -m 'Working on fixing favorites' --no-verify
+   28  git add .
+   29  git commit -m 'Favorites seems to be working again' --no-verify
+   30  git add .
+   31  git commit -m 'Done for the day'
+   32  git push origin issue-4-make-meme 
+   33  cd repos
+   34  cd ajax-project/
+   35  git add .
+   36  git commit -m 'Working on getting the meme editor to work' --no-verify
+   37  git add.
+   38  git add .
+   39  git commit -m 'saftey commit' --no-verify
+   40  git add .
+   41  git commit -m 'Made text look a bit nicer' --no-verify
+   42  git add .
+   43  git commit -m 'Most of the functionality is complete'
+   44  git push origin issue-4-make-meme 
+   45  git add .
+   46  git commit -m 'polish'
+   47  git push origin issue-4-make-meme 
+   48  git switch master
+   49  git pull origin
+   50  cd repos
+   51  cd rc0821-code-solutions/
+   52  cd
+   53  cd repos
+   54  cd ajax-project/
+   55  git branch issue-5-dark-mode-toggle
+   56  git switch issue-5-dark-mode-toggle 
+   57  git add .
+   58  git commit -m 'Started on button'
+   59  git push origin issue-5-dark-mode-toggle 
+   60  cd repos
+   61  cd ajax-project/
+   62  git add .
+   63  git commit -m 'Slider created, no functionality yet'
+   64  git add .
+   65  git commit -m 'Toggle functionality working'
+   66  git add .
+   67  git commit -m 'Toggle functionality working'
+   68  git add .
+   69  git commit -m 'Completed all functionality'
+   70  git push origin issue-5-dark-mode-toggle 
+   71  git switch master
+   72  git pull origin
+   73  cd
+   74  cd repos
+   75  git clone git@github.com:Cole-Allen/AJAX-MealDB-Website.git
+   76  npm ci
+   77  ls
+   78  cd AJAX-MealDB-Website/
+   79  npm ci
+   80  git branch issue-1-random-recipe
+   81  git switch issue-1-random-recipe 
+   82  git add .
+   83  git commit -m 'Basic HTML skeleton of page'
+   84  git add .
+   85  git commit -m 'Still working on layout for desktop'
+   86  git push origin issue-1-random-recipe 
+   87  cd repos
+   88  cd AJAX-MealDB-Website/
+   89  git add .
+   90  git commit -m 'Cleaned up commented code for categories feature'
+   91  git push origin issue-1-random-recipe 
+   92  git switch master
+   93  git add .
+   94  git switch master
+   95  git add .
+   96  git commit -m 'Switching branches'
+   97  git switch master
+   98  git pull origin
+   99  git branch issue-2-favorites
+  100  git switch issue-2-favorites 
+  101  cd repos
+  102  cd AJAX-MealDB-Website/
+  103  git add .
+  104  git commit -m 'Fixed some styling issues' --no-verify
+  105  git add .
+  106  git commit -m 'Cards show up in proper order, working on fav system in favorites view' --no-verify
+  107  cd repos
+  108  cd rc0821-code-solutions/
+  109  git switch master
+  110  git branch es6-const-let
+  111  git switch es6-const-let 
+  112  git add .
+  113  git commit -m 'Completed es6-const-let'
+  114  git push origin es6-const-let 
+  115  git switchg master
+  116  git switch master
+  117  git branch es6-template-literals
+  118  git switch es6-template-literals 
+  119  git add .
+  120  git commit -m 'Completed es6-template-literals'
+  121  git push origin es6-template-literals 
+  122  git add .
+  123  git commit -m 'Fixed lines 13 and 28'
+  124  git push origin es6-template-literals 
+  125  git switch master
+  126  git branch es6-destructuring
+  127  git switch es6-destructuring 
+  128  git add .
+  129  git commit -m 'A'
+  130  git switch master
+  131  git branch es6-arrow-functions
+  132  git switch es6-arrow-functions 
+  133  git add .
+  134  git commit -m 'Completed es6-arrow-functions'
+  135  git push origin es6-arrow-functions 
+  136  git switch es6-destructuring 
+  137  git add .
+  138  git commit -m 'Completed es6-destructuring'
+  139  git push origin es6-destructuring 
+  140  git switch master
+  141  git branch command-line-basics
+  142  git switch command-line-basics
+  143  cd command-line-basics/
+  144  man man
+  145  man cat
+  146  man ls
+  147  man pwd
+  148  pwd > i-was-here.txt
+  149  man echo
+  150  echo 'Hello,World!' > hello.txt
+  151  ls
+  152  cat >hello.txt
+  153  cd
+  154  cd repos
+  155  cd rc0821-code-solutions/
+  156  cd command-line-basics/
+  157  man cat
+  158  echo 'Hello, World!'
+  159  cat i-was-here.txt
+  160  ls
+  161  man ls
+  162  man cat
+  163  cat laziness.txt impatience.txt hubris.txt
+  164  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  165  cat three-virtues.txt
+  166  ls
+  167  ls lfz-staff
+  168  man ls
+  169  ls -aF lfz-staff
+  170  ls -a lfz-staff
+  171  ls -F lfz-staff
+  172  ls -aF lfz-staff >lfz-staff/contents.txt
+  173  cat lfz-staff/contents.txt
+  174  cat i-was-here.txt
+  175  cat hello.txt
+  176  man touch
+  177  touch tag-youre-it.txt
+  178  touch snoot/boop.txt
+  179  ls snoot
+  180  ma nmkdir
+  181  man mkdir
+  182  mkdir parent
+  183  man mkdir
+  184  mkdir -p parent/child/grandchild
+  185  touch parent/child/grandchild/.gitkeep
+  186  ls -a parent/child/grandchild
+  187  man mv
+  188  mv pokiemans pokemon
+  189  ma nrm
+  190  man rm
+  191  rm lol.txt
+  192  rm -r kill-me
+  193  ls
+  194  man cp
+  195  cp and-then.txt no-and-then.txt
+  196  ls
+  197  cat and-then.txt no-and-then.txt
+  198  man history
+  199  history
+  200  history > command-history.txt
