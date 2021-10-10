@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const nextID = 1;
+let nextID = 1;
 const grades = {};
 
 app.listen(3000, () => {
@@ -16,4 +16,12 @@ app.get('/api/grades', function (req, res, next) {
   res.json(array);
 });
 
-app.use();
+app.use(express.json());
+
+app.post('/api/grades', function (req, res, next) {
+  grades.nextID = req.body;
+  grades.nextID.id = nextID;
+  res.status(201);
+  res.send(grades.nextID);
+  nextID++;
+});
