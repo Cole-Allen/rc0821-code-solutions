@@ -11,15 +11,17 @@ app.listen(3000, () => {
 app.use(express.json());
 
 app.get('/api/notes', function (req, res, next) {
-  res.status(200);
-  res.send(data);
+  var array = [];
+  for (const i in data.notes) {
+    array.push(data.notes[i]);
+  }
+  res.staus(200).send(array);
 });
 
 app.get('/api/notes/:id', function (req, res, next) {
   const paramID = parseInt(req.params.id);
-  if (typeof paramID !== 'number' || Math.sign(paramID) === -1) {
-    res.status(400);
-    res.send({ error: 'id is not a positive integer' });
+  if (Math.sign(paramID) === -1 || isNaN(paramID)) {
+    res.status(400).send({ error: 'id is not a positive integer' });
   } else {
     if (data.notes[req.params.id]) {
       res.status(200);
@@ -32,7 +34,7 @@ app.get('/api/notes/:id', function (req, res, next) {
 });
 
 app.post('/api/notes', function (req, res, next) {
-  if (JSON.stringify(req.body) !== '{}') {
+  if (req.body.content) {
 
     const cid = data.nextId++;
 
@@ -57,7 +59,7 @@ app.post('/api/notes', function (req, res, next) {
 
 app.delete('/api/notes/:id', function (req, res, next) {
   const paramID = parseInt(req.params.id);
-  if (typeof paramID !== 'number' || Math.sign(paramID) === -1) {
+  if (Math.sign(paramID) === -1 || isNaN(paramID)) {
     res.status(400);
     res.send({ error: 'id is not a positive integer' });
   } else {
@@ -83,7 +85,7 @@ app.delete('/api/notes/:id', function (req, res, next) {
 
 app.put('/api/notes/:id', function (req, res, next) {
   const paramID = parseInt(req.params.id);
-  if (typeof paramID !== 'number' || Math.sign(paramID) === -1) {
+  if (Math.sign(paramID) === -1 || isNaN(paramID)) {
     res.status(400);
     res.send({ error: 'id is not a positive integer' });
   } else {
