@@ -16,7 +16,8 @@ app.get('/api/notes', function (req, res, next) {
 });
 
 app.get('/api/notes/:id', function (req, res, next) {
-  if (typeof req.params.id !== 'number' && Math.sign(req.params.id) === -1) {
+  const paramID = parseInt(req.params.id);
+  if (typeof paramID !== 'number' || Math.sign(paramID) === -1) {
     res.status(400);
     res.send({ error: 'id is not a positive integer' });
   } else {
@@ -51,5 +52,31 @@ app.post('/api/notes', function (req, res, next) {
   } else {
     res.status(400);
     res.send({ error: 'No content entered' });
+  }
+});
+
+app.delete('/api/notes/:id', function (req, res, next) {
+  const paramID = parseInt(req.params.id);
+  if (typeof paramID !== 'number' || Math.sign(paramID) === -1) {
+    res.status(400);
+    res.send({ error: 'id is not a positive integer' });
+  } else {
+    if (data.notes[req.params.id]) {
+      delete data.notes[req.params.id];
+      fs.writeFile('./data.json', JSON.stringify(data, null, 2), 'utf-8', err => {
+        if (err) {
+          res.status(500);
+          res.send({ error: 'An unexpected error occured' });
+
+        } else {
+          res.status(204);
+          res.send();
+        }
+      });
+
+    } else {
+      res.status(404);
+      res.send({ error: 'Entry not found' });
+    }
   }
 });
