@@ -1,5 +1,6 @@
 const express = require('express');
 const data = require('./data.json');
+const fs = require('fs');
 const app = express();
 
 app.listen(3000, () => {
@@ -30,15 +31,25 @@ app.get('/api/notes/:id', function (req, res, next) {
 });
 
 app.post('/api/notes', function (req, res, next) {
-  if (req.body) {
-    res.status(201);
-    data.notes[data.nextId] = req.body;
-    data.notes[data.nextId].id = data.nextId;
+  if (JSON.stringify(req.body) !== '{}') {
 
-    res.send(data.notes[data.nextId]);
-    data.nextId++;
+    const cid = data.nextId++;
+
+    data.notes[cid] = req.body;
+    data.notes[cid].id = cid;
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), 'utf-8', err => {
+      if (err) {
+        res.status(500);
+        res.send({ error: 'An unexpected error occured' });
+
+      } else {
+        res.status(201);
+        res.send(data.notes[cid]);
+      }
+    });
+
   } else {
-    res.status(404);
-    res.send({ error: 'Entry not found' });
+    res.status(400);
+    res.send({ error: 'No content entered' });
   }
 });
