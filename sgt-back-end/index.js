@@ -81,15 +81,11 @@ app.put('/api/grades/:gradeId', (req, res) => {
     res.status(400).json({ error: 'Score must be an integer' });
     return;
   }
-  if (score === '') {
-    res.status(400).json({ error: 'No score' });
-    return;
-  }
-  if (course === '') {
+  if (!course) {
     res.status(400).json({ error: 'No course' });
     return;
   }
-  if (name === '') {
+  if (!name) {
     res.status(400).json({ error: 'No name' });
 
   }
@@ -143,7 +139,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
       if (!data.rows[0]) {
         res.status(404).json({ error: 'Could not find gradeId' });
       } else {
-        res.status(204);
+        res.sendStatus(204);
       }
 
     })
