@@ -1,0 +1,60 @@
+* {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: gray;
+}
+
+label {
+  cursor: pointer;
+  font-family: sans-serif;
+  width: 50px;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#root {
+  display: flex;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ON {
+  background-color: rgb(0, 255, 34);
+}
+
+.button-one {
+  width: 50px;
+  height: 30px;
+  position: relative;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+}
+
+.button-two {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.ON .button-two {
+  transform: translateX(20px);
+}
