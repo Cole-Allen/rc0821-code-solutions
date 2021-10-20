@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HotButton from './hot-button';
+import Toggle from './toggle-switch';
 
 ReactDOM.render(
-  <HotButton/>,
+  <Toggle/>,
   document.getElementById('root')
 );
