@@ -1,7 +1,8 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-const file = express.static('./public');
+const file = express.static(path.join(__dirname, 'public'));
 
 app.use(file);
 
