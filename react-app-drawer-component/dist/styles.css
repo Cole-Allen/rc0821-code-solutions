@@ -6,6 +6,14 @@ body {
 a {
   cursor: pointer;
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  transition: background-color 0.15s;
+}
+
+a:hover {
+  background-color: rgb(236, 236, 236);
 }
 
 .fa-hamburger {
