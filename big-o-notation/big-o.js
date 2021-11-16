@@ -31,14 +31,14 @@ function uniqueQuadratic(words) {
       c < i;                        // 2 * n = O(n)
       c++                           // 2 * n = O(n)
     ) {
-      const comparing = words[c];   // 1 * n = O(n)
-      if (comparing === word) {     // 1 * 1 = O(1)
-        isUnique = false;           // 1 * 1 = O(1)
+      const comparing = words[c];   // n * n = O(n^2)
+      if (comparing === word) {     // n * n = O(n^2)
+        isUnique = false;           // n * n = O(n^2)
       }
     }
-    if (isUnique) {                 // 1 * n = O(n)
-      unique[unique.length] = word; // 2 * n = O(n)
+    if (isUnique) {                 // n * n = O(n^2)
+      unique[unique.length] = word; // n * n = O(n^2)
     }
   }
   return unique;                    // 1 * 1 = O(1)
-} // Big O Notation for uniqueQuadratic: O(n)
+} // Big O Notation for uniqueQuadratic: O(n^2)
